@@ -16,12 +16,13 @@
 .feature-card {
     background: #1A1A1A;
     border-radius: 15px;
-    padding: 2rem;
+    padding: 3rem;
     text-align: center;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     transition: all 0.3s ease;
     border: 1px solid #ecf0f1;
-    height: 280px;
+    width: 455px;
+    height: 212px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -75,8 +76,8 @@
 }
 
 .feature-card-icon img {
-    width: 40px;
-    height: 40px;
+    width: 82px;
+    height: 82px;
     object-fit: contain;
 }
 
@@ -86,7 +87,7 @@
 }
 
 .feature-card-content h3 {
-    font-size: 1.5rem;
+    font-size: 20px;
     color: #ffffff;
     margin-bottom: 1rem;
     font-family: 'Urbanist', sans-serif;
@@ -110,8 +111,9 @@
     }
     
     .feature-card {
-        height: 260px;
-        padding: 1.8rem;
+        width: 455px;
+        height: 212px;
+        padding: 2.5rem;
     }
     
     .feature-card-icon {
@@ -122,13 +124,15 @@
     }
     
     .feature-card-icon img {
-        width: 35px;
-        height: 35px;
+        width: 82px;
+        height: 82px;
     }
     
     .feature-card-content h3 {
-        font-size: 1.3rem;
+        font-size: 20px;
         margin-bottom: 0.8rem;
+        font-family: 'Urbanist', sans-serif;
+        font-weight: 600;
         white-space: nowrap;
     }
     
@@ -144,8 +148,9 @@
     }
     
     .feature-card {
-        height: 240px;
-        padding: 1.5rem;
+        width: 455px;
+        height: 212px;
+        padding: 2.5rem;
     }
     
     .feature-card-icon {
@@ -156,13 +161,15 @@
     }
     
     .feature-card-icon img {
-        width: 30px;
-        height: 30px;
+        width: 82px;
+        height: 82px;
     }
     
     .feature-card-content h3 {
-        font-size: 1.2rem;
+        font-size: 20px;
         margin-bottom: 0.8rem;
+        font-family: 'Urbanist', sans-serif;
+        font-weight: 600;
         white-space: nowrap;
     }
     
@@ -182,8 +189,9 @@
     }
     
     .feature-card {
-        height: 220px;
-        padding: 1.5rem;
+        width: 455px;
+        height: 212px;
+        padding: 2rem;
     }
     
     .feature-card-icon {
@@ -194,13 +202,15 @@
     }
     
     .feature-card-icon img {
-        width: 25px;
-        height: 25px;
+        width: 82px;
+        height: 82px;
     }
     
     .feature-card-content h3 {
-        font-size: 1.1rem;
+        font-size: 20px;
         margin-bottom: 0.8rem;
+        font-family: 'Urbanist', sans-serif;
+        font-weight: 600;
         white-space: nowrap;
     }
     
