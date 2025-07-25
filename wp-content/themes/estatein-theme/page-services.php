@@ -46,9 +46,14 @@
                 
                 <!-- Right Side -->
                 <div class="hero-right">
+                    <div class="mobile-round-logo">
+                        <img src="<?php echo wp_upload_dir()['baseurl']; ?>/2025/07/round-logo.png" alt="Estatein Logo" class="mobile-logo-image">
+                    </div>
                 </div>
-            </div>
-        </div>
+            </div</div>
     </section>
+
+    <!-- Include Four Cards Section -->
+    <?php include(get_template_directory() . '/template-parts/four-cards-section.php'); ?>
 
     </main>

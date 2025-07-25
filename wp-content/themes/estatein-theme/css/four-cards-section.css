@@ -1,0 +1,210 @@
+/* Four Cards Section Styles */
+.four-cards-section {
+    padding: 0rem 0;
+    background: #141414;
+    border-radius: 6px;
+    margin: 17px;
+}
+
+.four-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.feature-card {
+    background: #1A1A1A;
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    border: 1px solid #ecf0f1;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.feature-card-arrow {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    background: url('../../../uploads/2025/07/Vector 431.png') no-repeat center center;
+    background-size: 12px 12px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.feature-card:hover .feature-card-arrow {
+    background-color: #703BF7;
+    background-image: url('../../../uploads/2025/07/Vector 431.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 12px 12px;
+    border: 1px solid #ecf0f1;
+    transform: scale(1.1);
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    background: #1A1A1A;
+}
+
+.feature-card-icon {
+    width: 82px;
+    height: 82px;
+    background: none !important;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    transition: all 0.3s ease;
+}
+
+.feature-card-icon img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.feature-card:hover .feature-card-icon {
+    background: none !important;
+    transform: scale(1.1);
+}
+
+.feature-card-content h3 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.feature-card-content p {
+    color: #7f8c8d;
+    line-height: 1.6;
+    font-size: 1rem;
+    margin: 0;
+    display: block;
+}
+
+/* Responsive Design for Four Cards */
+@media (max-width: 1024px) {
+    .four-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .feature-card {
+        height: 260px;
+        padding: 1.8rem;
+    }
+    
+    .feature-card-icon {
+        width: 82px;
+        height: 82px;
+        font-size: 1.8rem;
+        margin-bottom: 1.2rem;
+    }
+    
+    .feature-card-icon img {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .feature-card-content h3 {
+        font-size: 1.3rem;
+        margin-bottom: 0.8rem;
+        white-space: nowrap;
+    }
+    
+    .feature-card-content p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .four-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .feature-card {
+        height: 240px;
+        padding: 1.5rem;
+    }
+    
+    .feature-card-icon {
+        width: 82px;
+        height: 82px;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .feature-card-icon img {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .feature-card-content h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.8rem;
+        white-space: nowrap;
+    }
+    
+    .feature-card-content p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .four-cards-section {
+        padding: 3rem 0;
+    }
+    
+    .four-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .feature-card {
+        height: 220px;
+        padding: 1.5rem;
+    }
+    
+    .feature-card-icon {
+        width: 82px;
+        height: 82px;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .feature-card-icon img {
+        width: 25px;
+        height: 25px;
+    }
+    
+    .feature-card-content h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        white-space: nowrap;
+    }
+    
+    .feature-card-content p {
+        font-size: 0.85rem;
+    }
+}

@@ -16,7 +16,7 @@ body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #f8f9fa;
+    background: #191919;
 }
 
 /* Promotional Banner */
@@ -267,6 +267,7 @@ body {
     align-items: stretch;
     height: 814px;
     width: 100%;
+    background: #141414;
 }
 
 /* Hero Center Image */
@@ -416,6 +417,11 @@ body {
     position: relative;
     margin: 0;
     padding: 0;
+}
+
+/* Mobile Round Logo - Hidden by default */
+.mobile-round-logo {
+    display: none;
 }
 
 .cta-button {
@@ -590,6 +596,140 @@ body {
     gap: 1rem;
     font-size: 0.9rem;
     color: #7f8c8d;
+}
+
+/* Four Cards Section */
+.four-cards-section {
+    padding: 4rem 0;
+    background: #f8f9fa;
+}
+
+.four-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+    justify-items: center;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.feature-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    border: 1px solid #ecf0f1;
+    width: 100%;
+    max-width: 280px;
+    height: 212px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    background: #fff;
+}
+
+.feature-card-icon {
+    width: 80px;
+    height: 80px;
+    background: #703BF7;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover .feature-card-icon {
+    background: #5a2ed6;
+    transform: scale(1.1);
+}
+
+.feature-card-content h3 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 600;
+}
+
+.feature-card-content p {
+    color: #7f8c8d;
+    line-height: 1.6;
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Responsive Design for Four Cards */
+@media (max-width: 768px) {
+    .four-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .feature-card {
+        height: 240px;
+        padding: 1.5rem;
+    }
+    
+    .feature-card-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .feature-card-content h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .feature-card-content p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .four-cards-section {
+        padding: 3rem 0;
+    }
+    
+    .four-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .feature-card {
+        height: 220px;
+        padding: 1.5rem;
+    }
+    
+    .feature-card-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .feature-card-content h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .feature-card-content p {
+        font-size: 0.85rem;
+    }
 }
 
 /* Footer */
@@ -1018,20 +1158,45 @@ body {
     .hero-layout {
         grid-template-columns: 1fr;
         gap: 2rem;
-        text-align: center;
+        text-align: left;
         height: auto;
     }
     
     .hero-left {
         padding: 3rem 2rem;
         order: 2;
+        text-align: left;
     }
     
     .hero-right {
         order: 1;
         min-height: 400px;
-         background-size: contain;
+        background-size: contain;
         background-position: center center;
+        position: relative;
+        margin-top: 85px;
+    }
+    
+    /* Mobile Round Logo */
+    .mobile-round-logo {
+        display: block !important;
+        position: absolute;
+        bottom: -1rem;
+        left: 0.5rem;
+        width: 120px;
+        height: 120px;
+        background: rgba(20, 20, 20, 0.8);
+        border-radius: 50%;
+        padding: 10px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        z-index: 3;
+    }
+    
+    .mobile-logo-image {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        border-radius: 50%;
     }
        
 
@@ -1046,14 +1211,21 @@ body {
     }
     
     .hero-cta-buttons {
-        justify-content: center;
+        justify-content: flex-start;
         margin-bottom: 2rem;
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
     }
     
     .cta-button {
-        min-width: 140px;
+        width: 100%;
         padding: 0.8rem 1.5rem;
         font-size: 1rem;
+        margin: 0;
+        box-sizing: border-box;
     }
     
     /* Hero Cards Responsive */
@@ -1183,9 +1355,16 @@ body {
     
     /* Hero Cards Mobile */
     .hero-cards-section {
-        flex-direction: column;
-        align-items: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
         gap: 0.8rem;
+        align-items: center;
+    }
+    
+    .hero-cards-section .hero-card:nth-child(3) {
+        grid-column: 1 / -1;
+        justify-self: center;
     }
     
     .hero-card {

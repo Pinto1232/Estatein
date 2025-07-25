@@ -19,7 +19,10 @@ add_action('after_setup_theme', 'estatein_theme_setup');
 
 // Enqueue styles and scripts
 function estatein_enqueue_scripts() {
-    wp_enqueue_style('estatein-style', get_stylesheet_uri(), array(), '1.0.0');
+    // Enqueue Font Awesome
+    wp_enqueue_style('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css', array(), '6.4.0');
+    
+    wp_enqueue_style('estatein-style', get_stylesheet_uri(), array('font-awesome'), '1.0.0');
     wp_enqueue_script('estatein-script', get_template_directory_uri() . '/js/main.js', array('jquery'), '1.0.0', true);
     
     // Add inline CSS for promo banner and hero right background images
