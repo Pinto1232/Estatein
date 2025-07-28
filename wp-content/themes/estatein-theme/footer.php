@@ -23,8 +23,8 @@
                     <li><a href="<?php echo home_url('/?page=about'); ?>">About Us</a></li>
                     <li><a href="<?php echo home_url('/?page=properties'); ?>">Properties</a></li>
                     <li><a href="<?php echo home_url('/?page=services'); ?>">Services</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Blog</a></li>
+                    <li><a href="<?php echo home_url('/?page=contact'); ?>">Contact</a></li>
+                    <li><a href="<?php echo home_url('/?page=blog'); ?>">Blog</a></li>
                 </ul>
             </div>
 

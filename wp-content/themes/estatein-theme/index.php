@@ -19,7 +19,7 @@ switch($requested_page) {
         include(get_template_directory() . '/page-contact.php');
         break;
     case 'blog':
-        // Blog page removed
+        include(get_template_directory() . '/page-blog.php');
         break;
     default:
         // Default home page content
