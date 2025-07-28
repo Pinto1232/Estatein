@@ -7,7 +7,11 @@
                     <img src="<?php echo wp_upload_dir()['baseurl']; ?>/2025/07/Logo.png" alt="Estatein Logo" class="footer-logo-img">
                 </div>
                 <div class="footer-email-form">
-                    <input type="email" placeholder="Enter your email" class="footer-email-input" required>
+                    <div class="email-input-wrapper">
+                        <i class="fas fa-envelope email-icon"></i>
+                        <input type="email" placeholder="Enter your email" class="footer-email-input" required>
+                        <i class="fas fa-file-invoice invoice-icon"></i>
+                    </div>
                 </div>
             </div>
 
