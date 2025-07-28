@@ -15,6 +15,12 @@ switch($requested_page) {
     case 'services':
         include(get_template_directory() . '/page-services.php');
         break;
+    case 'contact':
+        include(get_template_directory() . '/page-contact.php');
+        break;
+    case 'blog':
+        // Blog page removed
+        break;
     default:
         // Default home page content
         ?>
@@ -31,7 +37,7 @@ switch($requested_page) {
                                 <p class="hero-subtitle">Your journey to finding the perfect property begins here. Explore our listings to find the home that matches your dreams.</p>
                                 <div class="hero-cta-buttons">
                                     <a href="#properties" class="cta-button primary">Learn More</a>
-                                    <a href="<?php echo home_url('/contact'); ?>" class="cta-button secondary">Browse Properties</a>
+                                    <a href="<?php echo home_url('?page=contact'); ?>" class="cta-button secondary">Browse Properties</a>
                                 </div>
                                 
                                 <div class="hero-cards-section">
@@ -76,6 +82,16 @@ switch($requested_page) {
 
             <!-- Include Four Cards Section -->
             <?php include(get_template_directory() . '/template-parts/four-cards-section.php'); ?>
+            
+            <!-- Include Featured Properties Section -->
+            <?php include(get_template_directory() . '/template-parts/featured-properties-section.php'); ?>
+            
+            <!-- Include What Our Clients Say Section -->
+            <?php include(get_template_directory() . '/template-parts/what-our-clients-say-section.php'); ?>
+            
+            <!-- Include Start Real Estate Journey Section -->
+            <?php include(get_template_directory() . '/template-parts/start-real-estate-journey-section.php'); ?>
+            
         </main>
         <?php
         break;

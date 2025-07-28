@@ -1,0 +1,294 @@
+/* Pagination Icons Fix */
+
+/* Blog Pagination */
+.blog-pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.pagination-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: linear-gradient(145deg, #1a1a1a 0%, #0f0f0f 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    font-size: 16px;
+    min-width: 50px;
+    height: 50px;
+}
+
+.pagination-btn:hover {
+    background: #703BF7;
+    border-color: #703BF7;
+    transform: translateY(-2px);
+    color: #ffffff;
+}
+
+.pagination-btn i {
+    font-size: 14px;
+    display: inline-block;
+    line-height: 1;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Ensure Font Awesome icons display */
+.pagination-btn .fas,
+.pagination-btn .fa {
+    font-family: "Font Awesome 6 Free", "Font Awesome 5 Free", "FontAwesome" !important;
+    font-weight: 900 !important;
+    display: inline-block !important;
+    font-style: normal !important;
+    font-variant: normal !important;
+    text-rendering: auto !important;
+    line-height: 1 !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+}
+
+/* Specific icon content as fallback */
+.pagination-btn .fa-chevron-left::before {
+    content: "\f053";
+}
+
+.pagination-btn .fa-chevron-right::before {
+    content: "\f054";
+}
+
+.pagination-btn .fa-chevron-down::before {
+    content: "\f078";
+}
+
+/* Fix for left button icon not showing */
+.pagination-btn.prev-btn {
+    position: relative;
+}
+
+.pagination-btn.next-btn {
+    position: relative;
+}
+
+/* Ensure no duplicate icons - remove CSS arrow fallbacks completely */
+.pagination-btn.prev-btn::before,
+.pagination-btn.next-btn::after {
+    display: none !important;
+    content: none !important;
+}
+
+/* Ensure Font Awesome icons are visible */
+.pagination-btn .fa-chevron-left,
+.pagination-btn .fa-chevron-right {
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Force display of Font Awesome icons */
+.pagination-btn i.fas,
+.pagination-btn i.fa {
+    display: inline-block !important;
+    width: auto !important;
+    height: auto !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Prevent any pseudo-element arrows from showing - ALL pagination buttons */
+.pagination-btn::before,
+.pagination-btn::after,
+.pagination-btn.prev-btn::before,
+.pagination-btn.prev-btn::after,
+.pagination-btn.next-btn::before,
+.pagination-btn.next-btn::after {
+    display: none !important;
+    content: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+
+/* Override any section-specific pseudo-elements */
+.what-our-clients-say-section .pagination-btn::before,
+.what-our-clients-say-section .pagination-btn::after,
+.start-journey-section .pagination-btn::before,
+.start-journey-section .pagination-btn::after,
+.featured-properties-section .pagination-btn::before,
+.featured-properties-section .pagination-btn::after {
+    display: none !important;
+    content: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    background: none !important;
+}
+
+.pagination-numbers {
+    display: flex;
+    gap: 8px;
+}
+
+.page-number {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(145deg, #1a1a1a 0%, #0f0f0f 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.page-number:hover,
+.page-number.active {
+    background: #703BF7;
+    border-color: #703BF7;
+    color: #ffffff;
+}
+
+.page-dots {
+    color: #888888;
+    display: flex;
+    align-items: center;
+    padding: 0 8px;
+    font-weight: bold;
+}
+
+/* Section Pagination Buttons (Featured Properties, Testimonials, etc.) */
+.pagination-container .pagination-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50% !important;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    padding: 0;
+    min-width: 44px;
+}
+
+.pagination-container .pagination-btn:hover {
+    background: #703BF7;
+    border-color: #703BF7;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(112, 59, 247, 0.3);
+}
+
+.pagination-container .pagination-btn svg {
+    transition: transform 0.2s ease;
+}
+
+.pagination-container .pagination-btn:hover svg {
+    transform: scale(1.1);
+}
+
+/* Properties Page Load More Button */
+.load-more-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.load-more-btn {
+    background: linear-gradient(145deg, #1a1a1a 0%, #0f0f0f 100%);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    padding: 16px 32px;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 auto;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.load-more-btn:hover {
+    border-color: #703BF7;
+    background: rgba(112, 59, 247, 0.1);
+    transform: translateY(-2px);
+    color: #ffffff;
+}
+
+.load-more-btn i {
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+
+.load-more-btn:hover i {
+    transform: translateY(2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .blog-pagination {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+    
+    .pagination-numbers {
+        order: -1;
+    }
+    
+    .pagination-btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+    
+    .pagination-btn i {
+        font-size: 12px;
+    }
+    
+    .page-number {
+        width: 36px;
+        height: 36px;
+        font-size: 14px;
+    }
+    
+    .pagination-container .pagination-btn {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .pagination-btn {
+        padding: 8px 16px;
+        font-size: 13px;
+    }
+    
+    .page-number {
+        width: 32px;
+        height: 32px;
+        font-size: 13px;
+    }
+    
+    .pagination-numbers {
+        gap: 6px;
+    }
+    
+    .pagination-container .pagination-btn {
+        width: 36px;
+        height: 36px;
+    }
+}

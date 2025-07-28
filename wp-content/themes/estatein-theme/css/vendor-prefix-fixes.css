@@ -1,0 +1,93 @@
+/* Vendor Prefix Fixes for Line Clamp Compatibility */
+
+/* Fix for all elements using -webkit-line-clamp */
+.post-excerpt,
+.property-description,
+.service-description,
+.feature-card-content p,
+.blog-post .post-excerpt,
+.property-card .property-description,
+.testimonial-text,
+.value-description,
+.member-description,
+.contact-item .info-text,
+.faq-answer,
+.newsletter-description,
+.section-description {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Two-line clamp elements */
+.post-excerpt,
+.property-description,
+.service-description,
+.feature-card-content p,
+.blog-post .post-excerpt,
+.testimonial-text,
+.value-description,
+.member-description {
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+}
+
+/* Three-line clamp elements */
+.section-description,
+.newsletter-description,
+.faq-answer {
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+}
+
+/* Single-line clamp elements for mobile */
+@media (max-width: 640px) {
+    .feature-card-content p {
+        -webkit-line-clamp: 1;
+        line-clamp: 1;
+    }
+}
+
+@media (max-width: 480px) {
+    .feature-card-content p,
+    .property-card .property-description {
+        -webkit-line-clamp: 1;
+        line-clamp: 1;
+    }
+}
+
+/* Fallback for browsers that don't support line-clamp */
+@supports not (line-clamp: 2) {
+    .post-excerpt,
+    .property-description,
+    .service-description,
+    .feature-card-content p,
+    .blog-post .post-excerpt,
+    .testimonial-text,
+    .value-description,
+    .member-description {
+        max-height: 2.8em; /* Approximate height for 2 lines */
+        line-height: 1.4;
+    }
+    
+    .section-description,
+    .newsletter-description,
+    .faq-answer {
+        max-height: 4.2em; /* Approximate height for 3 lines */
+        line-height: 1.4;
+    }
+    
+    @media (max-width: 640px) {
+        .feature-card-content p {
+            max-height: 1.4em; /* Approximate height for 1 line */
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .feature-card-content p,
+        .property-card .property-description {
+            max-height: 1.4em; /* Approximate height for 1 line */
+        }
+    }
+}

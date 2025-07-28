@@ -1,0 +1,178 @@
+/* Contact Page Layout Fixes */
+
+/* Ensure proper hero section positioning */
+.contact-page {
+    position: relative;
+    z-index: 1;
+}
+
+.contact-hero {
+    position: relative;
+    z-index: 2;
+    background: #151515;
+    padding: 120px 0 80px 0;
+    text-align: center;
+    overflow: hidden;
+    margin-top: 0;
+    clear: both;
+}
+
+.contact-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 30% 30%, rgba(112, 59, 247, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 70% 70%, rgba(139, 92, 246, 0.08) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.contact-hero .hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.contact-hero .hero-title {
+    font-size: 56px;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 24px;
+    background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.contact-hero .hero-description {
+    font-size: 20px;
+    color: #b0b0b0;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Ensure main sections are properly positioned */
+.contact-main-section {
+    position: relative;
+    z-index: 1;
+    background: #151515;
+    padding: 100px 0;
+    clear: both;
+}
+
+.map-section {
+    position: relative;
+    z-index: 1;
+    background: #151515;
+    padding: 100px 0;
+    clear: both;
+}
+
+.contact-faq-section {
+    position: relative;
+    z-index: 1;
+    background: #151515;
+    padding: 100px 0;
+    clear: both;
+}
+
+/* Prevent any floating or positioning conflicts */
+.contact-page * {
+    position: static;
+}
+
+.contact-page .contact-hero,
+.contact-page .contact-main-section,
+.contact-page .map-section,
+.contact-page .contact-faq-section {
+    position: relative;
+}
+
+/* Ensure FAQ section stays in its proper place */
+.contact-faq-section {
+    display: block !important;
+    float: none !important;
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    position: relative;
+    z-index: 1;
+}
+
+.faq-item {
+    background: linear-gradient(145deg, #1a1a1a 0%, #0f0f0f 100%);
+    border-radius: 16px;
+    padding: 32px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.faq-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive fixes */
+@media (max-width: 768px) {
+    .contact-hero {
+        padding: 80px 0 60px 0;
+    }
+    
+    .contact-hero .hero-title {
+        font-size: 36px;
+    }
+    
+    .contact-hero .hero-description {
+        font-size: 16px;
+        max-width: 400px;
+    }
+    
+    .contact-main-section,
+    .map-section,
+    .contact-faq-section {
+        padding: 60px 0;
+    }
+    
+    .faq-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-hero {
+        padding: 60px 0 40px 0;
+    }
+    
+    .contact-hero .hero-title {
+        font-size: 28px;
+        margin-bottom: 16px;
+        line-height: 1.3;
+    }
+    
+    .contact-hero .hero-description {
+        font-size: 14px;
+        max-width: 300px;
+    }
+    
+    .contact-main-section,
+    .map-section,
+    .contact-faq-section {
+        padding: 40px 0;
+    }
+}

@@ -23,6 +23,52 @@ function estatein_enqueue_scripts() {
     wp_enqueue_style('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css', array(), '6.4.0');
     
     wp_enqueue_style('estatein-style', get_stylesheet_uri(), array('font-awesome'), '1.0.0');
+    
+    // Enqueue Featured Properties Section CSS
+    wp_enqueue_style('featured-properties-section', get_template_directory_uri() . '/css/featured-properties-section.css', array('estatein-style'), '1.0.1');
+    
+    // Enqueue What Our Clients Say Section CSS
+    wp_enqueue_style('what-our-clients-say-section', get_template_directory_uri() . '/css/what-our-clients-say-section.css', array('estatein-style'), '1.0.1');
+    
+    // Enqueue Start Journey Section CSS
+    wp_enqueue_style('start-journey-section', get_template_directory_uri() . '/css/start-journey-section.css', array('estatein-style'), '1.0.1');
+    
+    // Enqueue Start Real Estate Journey Section CSS
+    wp_enqueue_style('start-real-estate-journey-section', get_template_directory_uri() . '/css/start-real-estate-journey-section.css', array('estatein-style'), '1.0.1');
+    
+    // Enqueue Pagination Fix CSS
+    wp_enqueue_style('pagination-fix', get_template_directory_uri() . '/css/pagination-fix.css', array('estatein-style'), '1.0.1');
+    
+    // Enqueue Footer CSS
+    wp_enqueue_style('footer-css', get_template_directory_uri() . '/css/footer.css', array('estatein-style'), '1.0.1');
+    
+    // Enqueue Pages CSS
+    wp_enqueue_style('pages-css', get_template_directory_uri() . '/css/pages.css', array('estatein-style'), '1.0.1');
+    
+    // Enqueue Properties Page CSS
+    wp_enqueue_style('properties-page-css', get_template_directory_uri() . '/css/properties-page.css', array('estatein-style'), '1.0.1');
+    
+    // Enqueue Section Alignment CSS
+    wp_enqueue_style('section-alignment', get_template_directory_uri() . '/css/section-alignment.css', array('estatein-style'), '1.0.1');
+    
+    // Enqueue Pages Responsive CSS
+    wp_enqueue_style('pages-responsive-css', get_template_directory_uri() . '/css/pages-responsive.css', array('estatein-style'), '1.0.1');
+    
+    // Enqueue Page Enhancements CSS
+    wp_enqueue_style('page-enhancements-css', get_template_directory_uri() . '/css/page-enhancements.css', array('estatein-style'), '1.0.1');
+    
+    // Enqueue Contact Page Fix CSS
+    wp_enqueue_style('contact-page-fix-css', get_template_directory_uri() . '/css/contact-page-fix.css', array('estatein-style'), '1.0.1');
+    
+    // Enqueue Contact Button Fix CSS
+    wp_enqueue_style('contact-button-fix-css', get_template_directory_uri() . '/css/contact-button-fix.css', array('estatein-style'), '1.0.1');
+    
+    // Enqueue About Page CSS
+    wp_enqueue_style('about-page-css', get_template_directory_uri() . '/css/about-page.css', array('estatein-style'), '1.0.1');
+    
+    // Enqueue Services Page CSS
+    wp_enqueue_style('services-page-css', get_template_directory_uri() . '/css/services-page.css', array('estatein-style'), '1.0.1');
+    
     wp_enqueue_script('estatein-script', get_template_directory_uri() . '/js/main.js', array('jquery'), '1.0.0', true);
     
     // Add inline CSS for promo banner and hero right background images

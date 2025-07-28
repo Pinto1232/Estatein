@@ -1,0 +1,228 @@
+/* Start Your Real Estate Journey Today Section */
+.start-real-estate-journey-section {
+    height: 367px;
+    background: url('../../../uploads/2025/07/CTA.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.start-real-estate-journey-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 70% 80%, rgba(255, 255, 255, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 20% 60%, rgba(0, 0, 0, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.start-real-estate-journey-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+
+/* Journey Content */
+.journey-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 40px;
+    animation: fadeInUp 0.8s ease-out;
+    width: 100%;
+}
+
+.journey-text {
+    flex: 2;
+    max-width: 800px;
+    min-width: 0;
+}
+
+.journey-button {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: flex-end;
+    margin-left: 20px;
+}
+
+.journey-title {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #ffffff;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    text-align: left;
+    white-space: nowrap;
+}
+
+/* Removed journey-title pseudo-element */
+
+.journey-description {
+    font-size: 18px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.explore-properties-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #703BF7;
+    color: #ffffff;
+    width: 192px;
+    height: 63px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 13px;
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 500;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 3px solid #703BF7;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.explore-properties-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.6s ease;
+}
+
+.explore-properties-btn:hover::before {
+    left: 100%;
+}
+
+.explore-properties-btn:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 16px 32px rgba(112, 59, 247, 0.4);
+    background: #5a2ed6;
+    border-color: #5a2ed6;
+}
+
+.explore-properties-btn:active {
+    transform: translateY(-2px) scale(1.02);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+    to {
+        width: 80px;
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .start-real-estate-journey-section {
+        height: 300px;
+    }
+
+    .start-real-estate-journey-section .container {
+        padding: 0 15px;
+    }
+
+    .journey-content {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+        justify-content: center;
+        height: 100%;
+    }
+
+    .journey-text {
+        max-width: 100%;
+    }
+
+    .journey-title {
+        font-size: 36px;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    /* Removed journey-title pseudo-element reference */
+
+    .journey-description {
+        font-size: 16px;
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    .journey-button {
+        justify-content: center;
+        margin-left: 0;
+    }
+
+    .explore-properties-btn {
+        width: 180px;
+        height: 56px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .start-real-estate-journey-section {
+        height: 250px;
+    }
+
+    .journey-content {
+        gap: 15px;
+    }
+
+    .journey-title {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
+    .journey-description {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .explore-properties-btn {
+        width: 160px;
+        height: 50px;
+        font-size: 15px;
+    }
+}

@@ -1,0 +1,22 @@
+/* Global Section Alignment Styles */
+.section-title,
+h2.section-title,
+.section-header .section-title {
+    text-align: left !important;
+}
+
+.section-description,
+.section p,
+.section-header .section-description {
+    text-align: left !important;
+}
+
+/* Ensure RTL support */
+[dir="rtl"] .section-title,
+[dir="rtl"] h2.section-title,
+[dir="rtl"] .section-header .section-title,
+[dir="rtl"] .section-description,
+[dir="rtl"] .section p,
+[dir="rtl"] .section-header .section-description {
+    text-align: right !important;
+}

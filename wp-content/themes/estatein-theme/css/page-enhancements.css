@@ -1,0 +1,169 @@
+/* Enhanced Interactive Elements for All Pages */
+
+/* Enhanced Form Styling */
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.form-group select option {
+    background: #1a1a1a;
+    color: #ffffff;
+}
+
+/* Form validation styles */
+.form-group input:invalid,
+.form-group textarea:invalid,
+.form-group select:invalid {
+    border-color: rgba(231, 76, 60, 0.5);
+}
+
+.form-group input:valid,
+.form-group textarea:valid,
+.form-group select:valid {
+    border-color: rgba(112, 59, 247, 0.5);
+}
+
+/* Loading state for submit button */
+.submit-btn:disabled {
+    background: #555555;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.submit-btn.loading {
+    position: relative;
+    color: transparent;
+}
+
+.submit-btn.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ffffff;
+    border-top: 2px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Success and error message styling */
+.form-success {
+    background: linear-gradient(145deg, rgba(46, 204, 113, 0.1) 0%, rgba(39, 174, 96, 0.1) 100%);
+    border: 1px solid rgba(46, 204, 113, 0.3);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    color: #2ecc71;
+    text-align: center;
+    font-weight: 600;
+}
+
+.form-error {
+    background: linear-gradient(145deg, rgba(231, 76, 60, 0.1) 0%, rgba(192, 57, 43, 0.1) 100%);
+    border: 1px solid rgba(231, 76, 60, 0.3);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    color: #e74c3c;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* Enhanced hover effects for FAQ items */
+.faq-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.faq-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Smooth scrolling for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Focus styles for accessibility */
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus,
+.submit-btn:focus,
+.service-btn:focus,
+.read-more-btn:focus,
+.view-details-btn:focus,
+.contact-button:focus {
+    outline: 2px solid #703BF7;
+    outline-offset: 2px;
+}
+
+/* Enhanced button animations */
+.cta-button,
+.service-btn,
+.submit-btn,
+.view-details-btn,
+.contact-button {
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-button::before,
+.service-btn::before,
+.submit-btn::before,
+.view-details-btn::before,
+.contact-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.cta-button:hover::before,
+.service-btn:hover::before,
+.submit-btn:hover::before,
+.view-details-btn:hover::before,
+.contact-button:hover::before {
+    left: 100%;
+}
+
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #703BF7;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #5a2ed6;
+}
+
+/* Selection styling */
+::selection {
+    background: #703BF7;
+    color: #ffffff;
+}
+
+::-moz-selection {
+    background: #703BF7;
+    color: #ffffff;
+}

@@ -1,0 +1,39 @@
+/* Global Social Icons Styling */
+.footer-social,
+.contact-social,
+.member-social {
+    background-color: #1A1A1A;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Existing social link styles */
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    background: #000000 !important;
+    border-radius: 50% !important;
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    position: relative;
+    overflow: hidden;
+}
+
+.social-link:hover {
+    background: linear-gradient(135deg, #703BF7 0%, #8B5CF6 100%) !important;
+    border-color: #703BF7;
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 12px 32px rgba(112, 59, 247, 0.4);
+}
+
+.social-link i {
+    font-size: 20px;
+    position: relative;
+    z-index: 1;
+}

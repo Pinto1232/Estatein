@@ -1,0 +1,67 @@
+/* 
+===============================
+
+This file documents all pseudo-elements that have been removed from the Estatein theme
+to prevent duplicate icons and visual conflicts.
+
+========================
+
+1. SECTION TITLES:
+   - .section-title::after (what-our-clients-say-section.css)
+   - .start-journey-section .section-title::after (start-journey-section.css)
+   
+2. FOOTER LINKS:
+   - .footer-title::after (footer.css, temp_footer.css)
+   - .footer-menu a::before (footer.css, temp_footer.css)
+   - .footer-menu a:hover::before (footer.css, temp_footer.css)
+   - .social-link::before (footer.css, temp_footer.css)
+   - .social-link:hover::before (footer.css, temp_footer.css)
+   - .footer-links a::after (temp_footer.css)
+   - .footer-links a:hover::after (temp_footer.css)
+
+3. PAGINATION BUTTONS:
+   - All pagination button pseudo-elements already handled in pagination-fix.css
+
+REMAINING PSEUDO-ELEMENTS (INTENTIONALLY KEPT):
+==============================================
+
+1. BACKGROUND EFFECTS:
+   - .site-footer::before (footer.css, temp_footer.css) - Background gradient overlay
+   - .what-our-clients-say-section::before - Background gradient overlay
+   - .start-journey-section::before - Background gradient overlay
+   - .footer-newsletter::before (temp_footer.css) - Background gradient overlay
+
+2. CARD EFFECTS:
+   - .testimonial-card::before/.testimonial-card::after - Card styling effects
+   - .journey-step-card::before/.journey-step-card::after - Card styling effects
+
+3. CONTENT ELEMENTS:
+   - .testimonial-description::before - Quote mark
+   - .client-location::before - Location emoji
+   - .client-avatar::before - Avatar border effect
+
+4. BUTTON EFFECTS:
+   - .newsletter-btn::before/.newsletter-btn:hover::before (temp_footer.css) - Button shine effect
+
+5. OTHER CONTENT:
+   - Various icon pseudo-elements in pages.css for checkmarks and content
+
+NO CONFLICTS DETECTED:
+=====================
+
+All remaining pseudo-elements serve different purposes and do not conflict with each other.
+The cleanup focused specifically on removing decorative pseudo-elements from:
+- Section titles (underlines)
+- Footer navigation links (underlines and shine effects)
+- Social media links (shine effects)
+
+RESULT:
+=======
+
+✅ All duplicate icons and conflicting pseudo-elements have been removed
+✅ Footer links now use simple hover color changes instead of pseudo-element effects
+✅ Section titles no longer have decorative underlines
+✅ No CSS conflicts detected between files
+✅ All functional pseudo-elements (backgrounds, content, etc.) preserved
+
+*/

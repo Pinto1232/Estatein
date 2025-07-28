@@ -43,7 +43,7 @@
         
         <!-- Contact Us Button (Desktop Only) -->
         <div class="header-cta">
-            <a href="<?php echo home_url(); ?>#contact" class="contact-button">Contact Us</a>
+            <a href="<?php echo home_url('?page=contact'); ?>" class="contact-button">Contact Us</a>
         </div>
     </div>
 </header>
