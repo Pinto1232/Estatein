@@ -71,6 +71,9 @@ function estatein_enqueue_scripts() {
     
     wp_enqueue_script('estatein-script', get_template_directory_uri() . '/js/main.js', array('jquery'), '1.0.0', true);
     
+    // Enqueue Testimonials Carousel JavaScript
+    wp_enqueue_script('testimonials-carousel', get_template_directory_uri() . '/js/testimonials-carousel.js', array(), '1.1.0', true);
+    
     // Add inline CSS for promo banner and hero right background images
     $promo_bg_image = wp_upload_dir()['baseurl'] . '/2025/07/top-menu.png';
     $hero_bg_image = wp_upload_dir()['baseurl'] . '/2025/07/Container.png';
