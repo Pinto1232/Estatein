@@ -617,12 +617,14 @@
     margin-bottom: 24px;
     display: -webkit-box;
     -webkit-line-clamp: 3;
+    line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
 
 .featured-post .post-excerpt {
     -webkit-line-clamp: 4;
+    line-clamp: 4;
     font-size: 17px;
 }
 
