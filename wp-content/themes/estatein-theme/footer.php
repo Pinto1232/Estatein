@@ -10,7 +10,7 @@
                     <div class="email-input-wrapper">
                         <i class="fas fa-envelope email-icon"></i>
                         <input type="email" placeholder="Enter your email" class="footer-email-input" required>
-                        <i class="fas fa-file-invoice invoice-icon"></i>
+                        <i class="fab fa-telegram telegram-icon"></i>
                     </div>
                 </div>
             </div>

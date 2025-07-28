@@ -133,7 +133,7 @@
     transition: all 0.3s ease;
 }
 
-.invoice-icon {
+.telegram-icon {
     position: absolute;
     right: 20px;
     color: #ffffff;
@@ -428,7 +428,7 @@
         font-size: 16px;
     }
     
-    .invoice-icon {
+    .telegram-icon {
         right: 18px;
         font-size: 16px;
     }
@@ -486,7 +486,7 @@
         font-size: 15px;
     }
     
-    .invoice-icon {
+    .telegram-icon {
         right: 16px;
         font-size: 15px;
     }
